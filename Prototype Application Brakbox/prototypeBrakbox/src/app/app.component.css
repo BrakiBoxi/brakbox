@@ -1,0 +1,20 @@
+h1{
+    text-align: center;
+}
+
+.footer{
+    display: flex;
+    padding-left: 30px;
+}
+.footer div{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+button {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+

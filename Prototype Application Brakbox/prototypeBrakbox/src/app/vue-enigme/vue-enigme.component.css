@@ -1,0 +1,25 @@
+.centre{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-bottom: 30px;
+    
+}
+
+.vtf{
+    border: solid black 1px;
+    margin-right: 60px;
+    margin-left: 22px;
+
+}
+.contenu{
+    margin-right: 0px;
+    border: solid black 1px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+p{
+    text-align: center;
+}
