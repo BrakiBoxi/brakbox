@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,9 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'prototypeBrakmar';
-  afficherIntro = false;
-  afficherEnigme = true;
-  afficherAnnexes = false;
-  afficherIndices = false;
+  @Input() viewDisplayed : string = "intro";
+  constructor(){
+  }
+  ngOnInit(): void {
+  }
+
+  setViewDisplayed(viewName : string) {
+    this.viewDisplayed = viewName;
+  }
 
 }
