@@ -9,12 +9,13 @@
 </head>
 <body>
   <h1>testo</h1>
-  <app-menu-vues></app-menu-vues>
+  <app-menu-vues (event)="setViewDisplayed($event)"></app-menu-vues>
   <div>
-    <app-vue-intro *ngIf="afficherIntro"></app-vue-intro>
-    <app-vue-enigme *ngIf="afficherEnigme"></app-vue-enigme>
-    <app-vue-annexes *ngIf="afficherAnnexes"></app-vue-annexes>
-    <app-vue-indices *ngIf="afficherIndices"></app-vue-indices>
+    <app-vue-intro *ngIf="viewDisplayed == 'intro'"></app-vue-intro>
+    <app-vue-enigme *ngIf="viewDisplayed == 'enigme'"></app-vue-enigme>
+    <app-vue-annexes *ngIf="viewDisplayed == 'annexes'"></app-vue-annexes>
+    <app-vue-indices *ngIf="viewDisplayed == 'indices'"></app-vue-indices>
+
     
     
   </div>
