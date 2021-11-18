@@ -7,14 +7,14 @@
   <title>Application</title>
   <link rel="stylesheet" href="../app/app.component.css">
 </head>
-<body>
-  <h1>testo</h1>
+<body [ngStyle]="{'filter' : isSettingsOpen() ? 'blur(8px)' : '' , 'pointer-event' : isSettingsOpen() ? 'none' : '' }" >
+
   <app-menu-vues (event)="setViewDisplayed($event)"></app-menu-vues>
   <div>
-    <app-vue-intro *ngIf="viewDisplayed == 'intro'"></app-vue-intro>
-    <app-vue-enigme *ngIf="viewDisplayed == 'enigme'"></app-vue-enigme>
-    <app-vue-annexes *ngIf="viewDisplayed == 'annexes'"></app-vue-annexes>
-    <app-vue-indices *ngIf="viewDisplayed == 'indices'"></app-vue-indices>
+    <app-vue-intro *ngIf="viewDisplayed === 'intro'"></app-vue-intro>
+    <app-vue-enigme *ngIf="viewDisplayed === 'enigme'" ></app-vue-enigme>
+    <app-vue-annexes *ngIf="viewDisplayed === 'annexes'" ></app-vue-annexes>
+    <app-vue-indices *ngIf="viewDisplayed === 'indices'"></app-vue-indices>
 
     
     
@@ -23,7 +23,7 @@
     <div>
       <button class="retour"><img src="https://cdn-icons-png.flaticon.com/512/60/60817.png" alt="casa" height="60" width="60"></button>
       <p>Réglage</p>
-      <button class="reglage"><img src="https://www.clipartmax.com/png/middle/113-1131137_png-file-settings-vector-icon.png" alt="para" height="60" width="60"></button>
+      <button class="reglage" (click)="openSettings()"><img src="https://www.clipartmax.com/png/middle/113-1131137_png-file-settings-vector-icon.png" alt="para" height="60" width="60"></button>
       <p>Retour</p>
     </div>
   </div>

@@ -20,7 +20,7 @@ import { AffichageDocumentComponent } from './vues/affichage-document/affichage-
     VueEnigmeComponent,
     VueAnnexesComponent,
     VueIndicesComponent,
-    AffichageDocumentComponent
+    AffichageDocumentComponent,
   ],
   imports: [
     BrowserModule,

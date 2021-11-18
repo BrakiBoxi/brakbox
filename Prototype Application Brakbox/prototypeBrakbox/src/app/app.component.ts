@@ -6,15 +6,30 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'prototypeBrakmar';
+  title = 'prototypeBrakbox';
   @Input() viewDisplayed : string = "intro";
+  settingsOpen : boolean = false;
   constructor(){
   }
   ngOnInit(): void {
   }
 
-  setViewDisplayed(viewName : string) {
+  public setViewDisplayed(viewName : string) : void {
     this.viewDisplayed = viewName;
   }
+  public initializeAventure() : void {
 
+  }
+  public startAventure() : void {
+
+  }
+  public endAventure() : void {
+    
+  }
+  public openSettings() : void {
+    this.settingsOpen = true;
+  }
+  public isSettingsOpen() : boolean {
+    return this.settingsOpen;
+  }
 }
